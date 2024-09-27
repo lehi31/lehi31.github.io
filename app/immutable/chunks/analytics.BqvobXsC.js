@@ -1,0 +1,1 @@
+function i(){window.dataLayer=window.dataLayer||[];function n(...a){window.dataLayer.push(a)}n("js",new Date),n("config","GTM-KTNW6H63")}function t(n){if(!(window!=null&&window.gtag)){console.info("gtag not defined");return}console.info("tracking page",n),window.gtag("config","GTM-KTNW6H63",{page_path:n})}export{i,t};
