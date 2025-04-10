@@ -1,4 +1,4 @@
-import{s as E,n as C,e as B}from"./DZwCP9x3.js";import{S as F,i as M,d as v,c as S,e as s,f as r,k as l,l as m,o as I,g as T,n as Y,r as n,u as w,p as q}from"./BGKO8vuC.js";function H(h){let t,a,c,e,o,x,_,g,y,b,D,i,L=`<div class="col-8"><p><small class="text-muted"><strong>Disclaimer:</strong>
+import{s as E,n as C,e as B}from"./DZwCP9x3.js";import{S as F,i as M,d as v,c as S,e as s,f as r,k as l,l as m,o as I,g as T,n as Y,r as n,u as w,p as q}from"./rfDeVnsR.js";function H(h){let t,a,c,e,o,x,_,g,y,b,D,i,L=`<div class="col-8"><p><small class="text-muted"><strong>Disclaimer:</strong>
 						This is not an official, Church-sponsored website or product. Contents are not sponsored
 						or endorsed by or officially represent the Church of Jesus Christ of Latter-day Saints.</small></p></div>`;return{c(){t=n("div"),a=n("div"),c=n("div"),e=n("div"),o=n("img"),_=w(`
 				© `),g=w(h[0]),y=w(" | Lehi 31 Ward Bishopric"),b=n("br"),D=q(),i=n("div"),i.innerHTML=L,this.h()},l(u){t=l(u,"DIV",{id:!0,class:!0});var p=m(t);a=l(p,"DIV",{class:!0});var f=m(a);c=l(f,"DIV",{class:!0});var V=m(c);e=l(V,"DIV",{class:!0});var d=m(e);o=l(d,"IMG",{alt:!0,src:!0,class:!0}),_=I(d,`
