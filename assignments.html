@@ -38,15 +38,42 @@
 					document.documentElement.setAttribute('data-bs-theme', currentTheme);
 				}
 			};
+
+			// Handle chunk loading errors from stale cache (GitHub Pages caching issue)
+			(function () {
+				let reloadAttempted = sessionStorage.getItem('chunk-reload-attempted');
+
+				window.addEventListener(
+					'error',
+					function (event) {
+						const isChunkError =
+							event.message?.includes('Failed to fetch dynamically imported module') ||
+							event.message?.includes('Importing a module script failed') ||
+							(event.target?.tagName === 'SCRIPT' && event.target?.src);
+
+						if (isChunkError && !reloadAttempted) {
+							console.log('Chunk load error detected, reloading...');
+							sessionStorage.setItem('chunk-reload-attempted', 'true');
+							window.location.reload();
+						}
+					},
+					true
+				); // Use capture phase
+
+				// Clear the flag after successful load
+				window.addEventListener('load', function () {
+					sessionStorage.removeItem('chunk-reload-attempted');
+				});
+			})();
 		</script>
 		
 		<link href="./app/immutable/assets/Header.4U83PhvS.css" rel="stylesheet">
 		<link href="./app/immutable/assets/Footer.D_mhpwNn.css" rel="stylesheet">
-		<link rel="modulepreload" href="./app/immutable/entry/start.84EOKb8s.js">
-		<link rel="modulepreload" href="./app/immutable/chunks/zpVqYLZR.js">
+		<link rel="modulepreload" href="./app/immutable/entry/start.BkbV_6-s.js">
+		<link rel="modulepreload" href="./app/immutable/chunks/CVeSEfpZ.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/C5twpB8P.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/DzDB5CMn.js">
-		<link rel="modulepreload" href="./app/immutable/entry/app.DV9tvghz.js">
+		<link rel="modulepreload" href="./app/immutable/entry/app.BhvSyprd.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/CmsKOCeN.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/IHki7fMi.js">
 		<link rel="modulepreload" href="./app/immutable/nodes/0.yVFRWiRm.js">
@@ -66,15 +93,15 @@
 			
 			<script>
 				{
-					__sveltekit_1icfcbf = {
+					__sveltekit_w8bxg4 = {
 						base: new URL(".", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./app/immutable/entry/start.84EOKb8s.js"),
-						import("./app/immutable/entry/app.DV9tvghz.js")
+						import("./app/immutable/entry/start.BkbV_6-s.js"),
+						import("./app/immutable/entry/app.BhvSyprd.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 6],
@@ -88,5 +115,5 @@
 		</div>
 	
 
-<p class="text-muted" style="font-size:small;right:1rem;margin-top:-2rem;z-index:10;position:absolute;">Build Timestamp: 2025-10-23 13:57:48</p>
+<p class="text-muted" style="font-size:small;right:1rem;margin-top:-2rem;z-index:10;position:absolute;">Build Timestamp: 2025-10-23 17:44:01</p>
 </body></html>
