@@ -38,70 +38,22 @@
 					document.documentElement.setAttribute('data-bs-theme', currentTheme);
 				}
 			};
-
-			// Handle chunk loading errors from stale cache (GitHub Pages caching issue)
-			(function () {
-				const RELOAD_KEY = 'chunk-reload-attempted';
-				const reloadAttempted = sessionStorage.getItem(RELOAD_KEY);
-
-				window.addEventListener(
-					'error',
-					function (event) {
-						const isChunkError =
-							event.message?.includes('Failed to fetch dynamically imported module') ||
-							event.message?.includes('Importing a module script failed') ||
-							(event.target?.tagName === 'SCRIPT' && event.target?.src);
-
-						if (isChunkError && !reloadAttempted) {
-							console.log('Chunk load error detected, clearing cache and reloading...');
-							sessionStorage.setItem(RELOAD_KEY, Date.now());
-
-							// Clear service worker cache if it exists
-							if ('serviceWorker' in navigator) {
-								navigator.serviceWorker.getRegistrations().then(function (registrations) {
-									registrations.forEach(function (registration) {
-										registration.unregister();
-									});
-								});
-							}
-
-							// Clear caches API if available
-							if ('caches' in window) {
-								caches.keys().then(function (names) {
-									names.forEach(function (name) {
-										caches.delete(name);
-									});
-								});
-							}
-
-							// Add timestamp to force bypass cache
-							window.location.href = window.location.href.split('?')[0] + '?t=' + Date.now();
-						}
-					},
-					true
-				); // Use capture phase
-
-				// Clear the flag after successful load
-				window.addEventListener('load', function () {
-					sessionStorage.removeItem(RELOAD_KEY);
-				});
-			})();
 		</script>
 		
 		<link href="../app/immutable/assets/Spinner.CRM6NlOF.css" rel="stylesheet">
 		<link href="../app/immutable/assets/Loading.Ds8bshL9.css" rel="stylesheet">
 		<link href="../app/immutable/assets/8.DFKHadm3.css" rel="stylesheet">
-		<link rel="modulepreload" href="../app/immutable/entry/start.DSN3OVky.js">
-		<link rel="modulepreload" href="../app/immutable/chunks/DgBzb-hQ.js">
+		<link rel="modulepreload" href="../app/immutable/entry/start.B4Zt86Dd.js">
+		<link rel="modulepreload" href="../app/immutable/chunks/C-7_SNGF.js">
 		<link rel="modulepreload" href="../app/immutable/chunks/C5twpB8P.js">
 		<link rel="modulepreload" href="../app/immutable/chunks/DzDB5CMn.js">
-		<link rel="modulepreload" href="../app/immutable/entry/app.CofObg7h.js">
+		<link rel="modulepreload" href="../app/immutable/entry/app.DVCNLNze.js">
 		<link rel="modulepreload" href="../app/immutable/chunks/CmsKOCeN.js">
 		<link rel="modulepreload" href="../app/immutable/chunks/IHki7fMi.js">
 		<link rel="modulepreload" href="../app/immutable/nodes/0.yVFRWiRm.js">
 		<link rel="modulepreload" href="../app/immutable/chunks/BVnRNqiH.js">
 		<link rel="modulepreload" href="../app/immutable/nodes/2.DpUM7uxk.js">
-		<link rel="modulepreload" href="../app/immutable/nodes/8.D6_MLXI6.js">
+		<link rel="modulepreload" href="../app/immutable/nodes/8.CdvYM_oS.js">
 		<link rel="modulepreload" href="../app/immutable/chunks/cBg8kdZu.js">
 		<link rel="modulepreload" href="../app/immutable/chunks/CDcZWSVK.js"><title>Lehi31 | Assignments</title><!-- HEAD_svelte-1y0838e_START --><!-- HEAD_svelte-1y0838e_END -->
 	</head>
@@ -110,15 +62,15 @@
 			
 			<script>
 				{
-					__sveltekit_15l1vcv = {
+					__sveltekit_1hfc3sr = {
 						base: new URL("..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../app/immutable/entry/start.DSN3OVky.js"),
-						import("../app/immutable/entry/app.CofObg7h.js")
+						import("../app/immutable/entry/start.B4Zt86Dd.js"),
+						import("../app/immutable/entry/app.DVCNLNze.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2, 8],
