@@ -41,7 +41,8 @@
 
 			// Handle chunk loading errors from stale cache (GitHub Pages caching issue)
 			(function () {
-				let reloadAttempted = sessionStorage.getItem('chunk-reload-attempted');
+				const RELOAD_KEY = 'chunk-reload-attempted';
+				const reloadAttempted = sessionStorage.getItem(RELOAD_KEY);
 
 				window.addEventListener(
 					'error',
@@ -52,9 +53,29 @@
 							(event.target?.tagName === 'SCRIPT' && event.target?.src);
 
 						if (isChunkError && !reloadAttempted) {
-							console.log('Chunk load error detected, reloading...');
-							sessionStorage.setItem('chunk-reload-attempted', 'true');
-							window.location.reload();
+							console.log('Chunk load error detected, clearing cache and reloading...');
+							sessionStorage.setItem(RELOAD_KEY, Date.now());
+
+							// Clear service worker cache if it exists
+							if ('serviceWorker' in navigator) {
+								navigator.serviceWorker.getRegistrations().then(function (registrations) {
+									registrations.forEach(function (registration) {
+										registration.unregister();
+									});
+								});
+							}
+
+							// Clear caches API if available
+							if ('caches' in window) {
+								caches.keys().then(function (names) {
+									names.forEach(function (name) {
+										caches.delete(name);
+									});
+								});
+							}
+
+							// Add timestamp to force bypass cache
+							window.location.href = window.location.href.split('?')[0] + '?t=' + Date.now();
 						}
 					},
 					true
@@ -62,16 +83,16 @@
 
 				// Clear the flag after successful load
 				window.addEventListener('load', function () {
-					sessionStorage.removeItem('chunk-reload-attempted');
+					sessionStorage.removeItem(RELOAD_KEY);
 				});
 			})();
 		</script>
 		
-		<link rel="modulepreload" href="./app/immutable/entry/start.BkbV_6-s.js">
-		<link rel="modulepreload" href="./app/immutable/chunks/CVeSEfpZ.js">
+		<link rel="modulepreload" href="./app/immutable/entry/start.DSN3OVky.js">
+		<link rel="modulepreload" href="./app/immutable/chunks/DgBzb-hQ.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/C5twpB8P.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/DzDB5CMn.js">
-		<link rel="modulepreload" href="./app/immutable/entry/app.BhvSyprd.js">
+		<link rel="modulepreload" href="./app/immutable/entry/app.CofObg7h.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/CmsKOCeN.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/IHki7fMi.js">
 		<link rel="modulepreload" href="./app/immutable/nodes/0.yVFRWiRm.js">
@@ -84,15 +105,15 @@
 			
 			<script>
 				{
-					__sveltekit_w8bxg4 = {
+					__sveltekit_15l1vcv = {
 						base: new URL(".", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./app/immutable/entry/start.BkbV_6-s.js"),
-						import("./app/immutable/entry/app.BhvSyprd.js")
+						import("./app/immutable/entry/start.DSN3OVky.js"),
+						import("./app/immutable/entry/app.CofObg7h.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2, 7],
@@ -106,5 +127,5 @@
 		</div>
 	
 
-<p class="text-muted" style="font-size:small;right:1rem;margin-top:-2rem;z-index:10;position:absolute;">Build Timestamp: 2025-10-23 17:44:01</p>
+<p class="text-muted" style="font-size:small;right:1rem;margin-top:-2rem;z-index:10;position:absolute;">Build Timestamp: 2025-10-23 18:29:26</p>
 </body></html>
