@@ -38,15 +38,76 @@
 					document.documentElement.setAttribute('data-bs-theme', currentTheme);
 				}
 			};
+
+			// Handle chunk loading errors from stale cache (GitHub Pages caching issue)
+			(function () {
+				window.addEventListener(
+					'error',
+					function (event) {
+						const isChunkError =
+							event.message?.includes('Failed to fetch dynamically imported module') ||
+							event.message?.includes('Importing a module script failed') ||
+							(event.target?.tagName === 'SCRIPT' && event.target?.src);
+
+						if (isChunkError) {
+							event.preventDefault();
+
+							// Show user-friendly message
+							document.body.innerHTML = `
+								<div style="
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									min-height: 100vh;
+									font-family: system-ui, -apple-system, sans-serif;
+									background: #f8f9fa;
+									margin: 0;
+									padding: 20px;
+								">
+									<div style="
+										max-width: 500px;
+										background: white;
+										padding: 2rem;
+										border-radius: 8px;
+										box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+										text-align: center;
+									">
+										<h1 style="color: #0d6efd; margin-bottom: 1rem;">Update Available</h1>
+										<p style="color: #6c757d; margin-bottom: 1.5rem;">
+											A new version of this site is available. Please refresh the page to load the latest version.
+										</p>
+										<button onclick="location.reload()" style="
+											background: #0d6efd;
+											color: white;
+											border: none;
+											padding: 12px 24px;
+											border-radius: 4px;
+											font-size: 16px;
+											cursor: pointer;
+											font-weight: 500;
+										">
+											Refresh Page
+										</button>
+										<p style="color: #adb5bd; font-size: 12px; margin-top: 1rem;">
+											If the issue persists, please clear your browser cache and try again.
+										</p>
+									</div>
+								</div>
+							`;
+						}
+					},
+					true
+				);
+			})();
 		</script>
 		
 		<link href="./app/immutable/assets/Header.4U83PhvS.css" rel="stylesheet">
 		<link href="./app/immutable/assets/Footer.D_mhpwNn.css" rel="stylesheet">
-		<link rel="modulepreload" href="./app/immutable/entry/start.B4Zt86Dd.js">
-		<link rel="modulepreload" href="./app/immutable/chunks/C-7_SNGF.js">
+		<link rel="modulepreload" href="./app/immutable/entry/start.Dbs7pGX9.js">
+		<link rel="modulepreload" href="./app/immutable/chunks/BPHqaKaT.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/C5twpB8P.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/DzDB5CMn.js">
-		<link rel="modulepreload" href="./app/immutable/entry/app.DVCNLNze.js">
+		<link rel="modulepreload" href="./app/immutable/entry/app.CwJts7fX.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/CmsKOCeN.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/IHki7fMi.js">
 		<link rel="modulepreload" href="./app/immutable/nodes/0.yVFRWiRm.js">
@@ -64,15 +125,15 @@
 			
 			<script>
 				{
-					__sveltekit_1hfc3sr = {
+					__sveltekit_3ixzrx = {
 						base: new URL(".", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./app/immutable/entry/start.B4Zt86Dd.js"),
-						import("./app/immutable/entry/app.DVCNLNze.js")
+						import("./app/immutable/entry/start.Dbs7pGX9.js"),
+						import("./app/immutable/entry/app.CwJts7fX.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 15],
@@ -86,5 +147,5 @@
 		</div>
 	
 
-<p class="text-muted" style="font-size:small;right:1rem;margin-top:-2rem;z-index:10;position:absolute;">Build Timestamp: 2025-10-23 18:32:54</p>
+<p class="text-muted" style="font-size:small;right:1rem;margin-top:-2rem;z-index:10;position:absolute;">Build Timestamp: 2025-10-24 12:04:34</p>
 </body></html>
