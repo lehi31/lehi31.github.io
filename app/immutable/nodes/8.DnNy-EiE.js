@@ -1,0 +1,1 @@
+import{r as e}from"../chunks/hp4PFHFv.js";const r=async()=>{throw e(301,"/ward/sacrament-business")},t=Object.freeze(Object.defineProperty({__proto__:null,load:r},Symbol.toStringTag,{value:"Module"}));export{t as universal};
