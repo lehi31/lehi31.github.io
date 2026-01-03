@@ -1,1 +1,0 @@
-import{w as r}from"./Oc_eB7Hn.js";const a=r([]);function s(o,n="info"){const t=`toast-${Date.now()}-${Math.random()}`;a.update(i=>[...i,{id:t,message:o,type:n}])}function d(o){a.update(n=>n.filter(t=>t.id!==o))}function w(o){s(o,"danger")}function c(o){s(o,"warning")}function e(o){s(o,"info")}export{c as a,e as b,d,w as s,a as t};
