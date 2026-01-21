@@ -1,0 +1,1 @@
+import{r as e}from"../chunks/pfMRWl6z.js";const r=async()=>{throw e(301,"/ward/class-business")},t=Object.freeze(Object.defineProperty({__proto__:null,load:r},Symbol.toStringTag,{value:"Module"}));export{t as universal};
