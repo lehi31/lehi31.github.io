@@ -1,0 +1,1 @@
+import"../chunks/NZTpNUN0.js";import"../chunks/69_IOA4Y.js";import{P as t}from"../chunks/BfYhV3Pm.js";import{B as a}from"../chunks/CTAB1j9N.js";function m(o){t(o,{pageTitle:"BoM Reading Challenge",children:(e,r)=>{a(e,{})},$$slots:{default:!0}})}export{m as component};
