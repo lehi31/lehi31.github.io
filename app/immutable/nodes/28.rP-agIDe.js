@@ -1,0 +1,1 @@
+import"../chunks/NZTpNUN0.js";import"../chunks/69_IOA4Y.js";import{P as t}from"../chunks/CgZT8wvO.js";import{W as a}from"../chunks/C1kT2UoJ.js";function i(o){t(o,{pageTitle:"Temple Challenge",children:(e,r)=>{a(e,{})},$$slots:{default:!0}})}export{i as component};
