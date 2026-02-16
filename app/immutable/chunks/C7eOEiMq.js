@@ -1,1 +1,0 @@
-import{h as a,d as r}from"./BWCcv1pC.js";function o(i,t,e,s,l){a&&r();var n=t.$$slots?.[e],f=!1;n===!0&&(n=t[e==="default"?"children":e],f=!0),n===void 0||n(i,f?()=>s:s)}function u(i){const t={};i.children&&(t.default=!0);for(const e in i.$$slots)t[e]=!0;return t}export{u as a,o as s};
