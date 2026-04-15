@@ -1,1 +1,0 @@
-import"./NZTpNUN0.js";import"./69_IOA4Y.js";import{f as l,t as o,a}from"./CXTq6vEK.js";import{d as p}from"./DltPPRVL.js";import{p as i}from"./Bs1YJy05.js";var d=l("<div></div>");function z(m,r){let s=i(r,"size",8,"md");var t=d();let e;o(()=>e=p(t,1,"loader svelte-1flt56z",null,e,{xs:s()==="xs",sm:s()==="sm",md:s()==="md",lg:s()==="lg",xl:s()==="xl"})),a(m,t)}export{z as S};
