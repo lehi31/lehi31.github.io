@@ -1,0 +1,1 @@
+function o(e){if(typeof window>"u")return;const t=document.getElementById(e);if(t&&window.bootstrap?.Offcanvas){window.bootstrap.Offcanvas.getOrCreateInstance(t).hide();return}document.querySelector(`[data-bs-target="#${e}"]`)?.click()}export{o as c};
