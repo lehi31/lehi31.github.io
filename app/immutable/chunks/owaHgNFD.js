@@ -1,1 +1,0 @@
-import{w as c}from"./Cikr9fE8.js";const a=c([]);function o(s,n="info"){const t=`toast-${Date.now()}-${Math.random()}`;a.update(i=>[...i,{id:t,message:s,type:n}])}function f(s){a.update(n=>n.filter(t=>t.id!==s))}function u(s){o(s,"danger")}function e(s){o(s,"warning")}function w(s){o(s,"success")}function d(s){o(s,"info")}export{w as a,e as b,d as c,f as d,u as s,a as t};
