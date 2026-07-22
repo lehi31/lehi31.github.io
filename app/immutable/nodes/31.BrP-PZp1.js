@@ -1,1 +1,0 @@
-import"../chunks/NZTpNUN0.js";import"../chunks/69_IOA4Y.js";import{P as t}from"../chunks/kNX7f2O-.js";import{M as s}from"../chunks/BoG5G_t1.js";function m(o){t(o,{pageTitle:"Missionaries",children:(i,e)=>{s(i,{})},$$slots:{default:!0}})}export{m as component};
