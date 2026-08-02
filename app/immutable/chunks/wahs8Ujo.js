@@ -1,0 +1,1 @@
+function t(n){return n.trim().split(/\s+/)[0]||n}function s(n){const a=t(n.first_name);return n.last_name?`${a} ${n.last_name}`:a}function i(n){const a=t(n.first_name);return n.last_name?`${n.last_name}, ${a}`:a}function e(n){const a=i(n);return n.nickname?{primary:n.nickname,secondary:a,isNickname:!0}:{primary:a,isNickname:!1}}export{e as a,i as b,s as g};
