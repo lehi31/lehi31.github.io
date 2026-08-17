@@ -1,1 +1,0 @@
-import"../chunks/NZTpNUN0.js";import"../chunks/69_IOA4Y.js";import{P as t}from"../chunks/D4pQZYrg.js";import{S as s}from"../chunks/3FjNSs2Y.js";function c(o){t(o,{pageTitle:"Resources",children:(e,r)=>{s(e,{section:"Resources"})},$$slots:{default:!0}})}export{c as component};
