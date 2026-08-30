@@ -11,7 +11,9 @@
 
 		<meta charset="utf-8">
 		<link rel="icon" type="image/x-icon" href="../../assets/favicon.png">
-		<link rel="apple-touch-icon" type="image/x-icon" href="../../assets/favicon.png">
+		<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+		<link rel="manifest" href="../../manifest.webmanifest">
+		<meta name="theme-color" content="#212529">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
 		<!-- Add these scripts to the bottom of your HTML file, just before the closing body tag -->
@@ -40,32 +42,32 @@
 		<link href="../../app/immutable/assets/PageLayout.DLGmbvMc.css" rel="stylesheet">
 		<link href="../../app/immutable/assets/CounselSections.Qjj97I5q.css" rel="stylesheet">
 		<link href="../../app/immutable/assets/41.DMntNAzk.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../app/immutable/entry/start.CvNTvca9.js">
-		<link rel="modulepreload" href="../../app/immutable/chunks/CyoK9faC.js">
+		<link rel="modulepreload" href="../../app/immutable/entry/start.C69mwaMC.js">
+		<link rel="modulepreload" href="../../app/immutable/chunks/BQb2tBpv.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/BVYR1Fdn.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/CVaB-Qw9.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/DIeogL5L.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/BUApaBEI.js">
-		<link rel="modulepreload" href="../../app/immutable/entry/app.4rD2Ap5i.js">
+		<link rel="modulepreload" href="../../app/immutable/entry/app.C0_jY8t-.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/CmsKOCeN.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/NZTpNUN0.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/DXAaKQpZ.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/D86Vu554.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/eyvNfYfS.js">
-		<link rel="modulepreload" href="../../app/immutable/nodes/0.CnCFZPGX.js">
+		<link rel="modulepreload" href="../../app/immutable/nodes/0.B6QbRXbh.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/69_IOA4Y.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/BeuAmF8D.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/BSRDqXOU.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/BP5h1aTG.js">
-		<link rel="modulepreload" href="../../app/immutable/chunks/BA9mPQyG.js">
-		<link rel="modulepreload" href="../../app/immutable/chunks/DUlsKLwr.js">
+		<link rel="modulepreload" href="../../app/immutable/chunks/JQVe39So.js">
+		<link rel="modulepreload" href="../../app/immutable/chunks/BYMoSbLX.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/l2BZFvv_.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/CeTAawAI.js">
-		<link rel="modulepreload" href="../../app/immutable/chunks/DzSS7aMX.js">
-		<link rel="modulepreload" href="../../app/immutable/nodes/41.yA0q7sC3.js">
-		<link rel="modulepreload" href="../../app/immutable/chunks/BMzVQZ0j.js">
-		<link rel="modulepreload" href="../../app/immutable/chunks/sTtBH5Zd.js">
-		<link rel="modulepreload" href="../../app/immutable/chunks/GttFc-tm.js">
+		<link rel="modulepreload" href="../../app/immutable/chunks/Cu_mNPAt.js">
+		<link rel="modulepreload" href="../../app/immutable/nodes/41.BFx3C4z6.js">
+		<link rel="modulepreload" href="../../app/immutable/chunks/BU5kA6L4.js">
+		<link rel="modulepreload" href="../../app/immutable/chunks/Dton25NR.js">
+		<link rel="modulepreload" href="../../app/immutable/chunks/eugbo3BZ.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/DuFvsWGH.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/CWb368Fo.js">
 		<link rel="modulepreload" href="../../app/immutable/chunks/BShfskzj.js"><!--12qhfyh--><meta property="og:title" content="Lehi 31st Tongan Ward"> <meta property="og:description" content="Lehi 31st Tongan Ward Website, your information hub from Bishopric"> <meta property="og:url" content="https://lehi31.com"> <meta name="twitter:title" content="Lehi 31st Tongan Ward"> <meta name="twitter:description" content="Lehi 31st Tongan Ward Website, your information hub from Bishopric"><!----><!--rsktmz--><!----><title>Lehi31 | The Huddle</title>
@@ -76,15 +78,15 @@
 			
 			<script>
 				{
-					__sveltekit_1b4q8tt = {
+					__sveltekit_mrsd0e = {
 						base: new URL("../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../../app/immutable/entry/start.CvNTvca9.js"),
-						import("../../app/immutable/entry/app.4rD2Ap5i.js")
+						import("../../app/immutable/entry/start.C69mwaMC.js"),
+						import("../../app/immutable/entry/app.C0_jY8t-.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 41],
@@ -93,6 +95,12 @@
 							error: null
 						});
 					});
+
+					if ('serviceWorker' in navigator) {
+						addEventListener('load', function () {
+							navigator.serviceWorker.register('../../service-worker.js');
+						});
+					}
 				}
 			</script>
 		</div>

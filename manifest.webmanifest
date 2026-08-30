@@ -1,0 +1,20 @@
+{
+	"name": "Lehi 31st Ward",
+	"short_name": "Lehi 31",
+	"description": "Lehi 31st Tongan Ward — announcements, calendar, sacrament programs, and the class schedule.",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"background_color": "#212529",
+	"theme_color": "#212529",
+	"icons": [
+		{ "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+		{ "src": "/assets/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" },
+		{
+			"src": "/assets/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable"
+		}
+	]
+}
