@@ -1,1 +1,0 @@
-import{r as e}from"../chunks/hp4PFHFv.js";const o=async()=>{throw e(301,"/resources/class-lessons")},s=Object.freeze(Object.defineProperty({__proto__:null,load:o},Symbol.toStringTag,{value:"Module"}));export{s as universal};

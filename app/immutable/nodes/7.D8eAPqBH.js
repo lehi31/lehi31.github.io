@@ -1,1 +1,0 @@
-import{r as e}from"../chunks/hp4PFHFv.js";const o=async()=>{throw e(301,"/system/roles")},t=Object.freeze(Object.defineProperty({__proto__:null,load:o},Symbol.toStringTag,{value:"Module"}));export{t as universal};
