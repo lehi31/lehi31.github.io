@@ -1,1 +1,0 @@
-import{o as f,q as o,H as u,E as _,l as t,v as g,C as p,w as l,x as i,y as d,z as v}from"./DEDTKvMK.js";function C(n,r){let s=null,E=t;var a;if(t){s=v;for(var e=g(document.head);e!==null&&(e.nodeType!==p||e.data!==n);)e=l(e);if(e===null)i(!1);else{var y=l(e);e.remove(),d(y)}}t||(a=document.head.appendChild(f()));try{o(()=>r(a),u|_)}finally{E&&(i(!0),d(s))}}export{C as h};
