@@ -1,1 +1,0 @@
-import{s as r,p as t,u as e}from"./DrTaWlLg.js";const s={get error(){return t.error},get status(){return t.status},get url(){return t.url}},u={get current(){return e.current},check:r.updated.check},p=s,c=u;export{p,c as u};
