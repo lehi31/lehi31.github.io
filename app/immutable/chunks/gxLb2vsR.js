@@ -1,0 +1,1 @@
+import{h as y,p as n,k as s}from"./Cts9bc6o.js";function d(t=new Date){return y(t,"yyyy-MM-dd")}function u(t){if(!t)return"";try{return y(n(t),"MMM d, yyyy")}catch{return""}}function c(t,o){const a=s(n(t),n(o));if(a===0)return"today";const r=Math.abs(a),e=r===1?"day":"days";return a<0?`${r} ${e} ago`:`in ${r} ${e}`}export{u as f,c as r,d as t};
