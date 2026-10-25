@@ -1,0 +1,1 @@
+function o(e){return!!e.moved_out_at}function t(e){return e.filter(n=>!o(n))}function r(e){return!!e.synced_at}function u(e){return e.phone_override||e.phone_number||null}export{t as a,r as b,u as e,o as i};
