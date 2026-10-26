@@ -1,0 +1,1 @@
+import{m as o,n as r,o as c,t as m}from"./BK8Dh9AV.js";function u(e,t,s){const n=o(e,s),a=o(t,s),f=+n-r(n),i=+a-r(a);return Math.round((f-i)/c)}function k(e){const t=m(e);return t.setDate(1),t.setHours(0,0,0,0),t}export{u as d,k as s};
