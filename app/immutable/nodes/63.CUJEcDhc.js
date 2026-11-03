@@ -1,0 +1,1 @@
+import"../chunks/NZTpNUN0.js";import"../chunks/69_IOA4Y.js";import{P as t}from"../chunks/nFygA_y6.js";const o=!0,r=!1,p=Object.freeze(Object.defineProperty({__proto__:null,prerender:o,ssr:r},Symbol.toStringTag,{value:"Module"}));function s(e){t(e,{slug:"tithing-declaration"})}export{s as component,p as universal};
