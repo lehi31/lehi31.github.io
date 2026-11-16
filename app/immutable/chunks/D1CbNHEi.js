@@ -1,1 +1,0 @@
-import{n as o,o as r,q as c,t as m}from"./CcNQRo8G.js";function u(e,t,s){const n=o(e,s),a=o(t,s),f=+n-r(n),i=+a-r(a);return Math.round((f-i)/c)}function k(e){const t=m(e);return t.setDate(1),t.setHours(0,0,0,0),t}export{u as d,k as s};

@@ -1,0 +1,1 @@
+import{r as o}from"../chunks/pfMRWl6z.js";import"../chunks/NZTpNUN0.js";import"../chunks/69_IOA4Y.js";const e=!1,r=()=>{throw o(302,"/ward/next-ordinance")},s=Object.freeze(Object.defineProperty({__proto__:null,load:r,ssr:e},Symbol.toStringTag,{value:"Module"}));function i(t){}export{i as component,s as universal};
